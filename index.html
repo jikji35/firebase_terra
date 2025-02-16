@@ -1,0 +1,259 @@
+<!-- 부트스트랩 5.2.2로 제작되었다. css나 js 를 버전에 다른걸 설치하면 작동이 제대로 안될수있으니 주의바람!
+부트스트랩 link는 <head>에 삽입하고, <script>는 <body>부분의 끝부분에 삽입해야하나 <script> "DOMContentLoaded" 또는 defer를 <head>안에 삽입하면 그 다음부터 스크립트 태그를 <body> 어느 위치에 있어도 정상적으로 작동한다.한다.
+✅메인 이 페이지는 초기화면,엑셀 스프레드시트 접속연결시 보안검증 절차없이 코딩되어있다.  ✅ [[무검증 코딩 페이지]] 
+-->
+<!-- [이모지 모음] 🥰🥵 💥🖐 ⌚ 📱 📲 💻 📞 ⏰ ⌛ 📌🚩🧡❌ ❗ ❓
+🔔🔕 ✅ ❎ 💯 📢 📣 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="description" content="직지35회" />
+    <title>&#x260E; 직지35</title>
+
+    <!-- 아이폰에서는 전화번호형식 010-1234-5678과 같은 형식이면 자동링크라 바로 전화가 걸린다. 이를 막기위한 메타태그는 -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- 화면크기 반응형으로 작동시킬수있다.
+      @media ( max-width: 640px ) {
+      body { color: red; }
+      }
+    -->
+
+    <!-- 파비콘 아이콘들 -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="36x36"
+      href="image/android-icon-36x36.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="image/android-icon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="72x72"
+      href="image/android-icon-72x72.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="image/android-icon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="144x144"
+      href="image/android-icon-144x144.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="image/android-icon-192x192.png"
+    />
+
+    <link rel="icon" href="image/favicon.ico?v=2" />
+
+    <!-- 애플 터치 아이콘 -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="image/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="image/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="image/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="image/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="image/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="image/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="image/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="image/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="image/apple-icon-180x180.png"
+    />
+
+    <!-- 웹사이트 매니페스트 -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Ms브라우저 설정 파일 -->
+    <link rel="browserconfig" href="/browserconfig.xml" />
+
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- 마우스 우클릭 방지/드래그 방지하는 스크립트를 head안에 삽입! -->
+    <script type="text/javascript">
+      document.oncontextmenu = function () {
+        return false;
+      };
+    </script>
+
+    <!-- ✅첫페이지 검증확인 페이지로 <style>과 <script>는 간단히 내부에서 처리했다. -->
+    <style>
+      /* 페이지 기본 스타일 */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* 전체 백그라운드 배경화면 지정 */
+      body {
+        font-family: Arial, sans-serif;
+        background: url('picture/tree-1-1.png') no-repeat center center/cover; /* 배경화면 */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* 로그인 창 스타일 */
+      #login-box {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        width: 300px;
+      }
+
+      /* 로고 이미지 스타일 */
+      .logo {
+        width: 75px; /* 로고 크기 설정 */
+        height: auto;
+        margin-bottom: 15px; /* 입력창과 간격 조정 */
+      }
+
+      /* 입력 필드 */
+      input {
+        width: 80%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      /* 로그인 버튼 */
+      button {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+
+      /* 메인 콘텐츠 숨김 */
+      #main-content {
+        display: none;
+        text-align: center;
+        color: white;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 로그인 박스 -->
+    <div id="login-box">
+      <img src="image/logo.png" alt="로고" class="logo" />
+      <!-- ✅ 중앙 정렬된 로고 -->
+      <h2>PASSWORD</h2>
+      <input type="password" id="password" placeholder="비밀번호 입력" />
+      <br />
+      <button onclick="checkPassword()">로그인</button>
+    </div>
+
+    <!-- ✅ <head>부분에서 스크립트 "DOMContentLoaded", function() 대신에 defer을 사용하면 스크립트가 <body>어느 위치에와도 상관없지만 생략했기때문에 여기서는 <body> 제일 하단에 코드를 삽입해야한다.  -->
+    <script>
+      function checkPassword() {
+        const correctPassword = '77777'; // 설정된 비밀번호
+        const passwordInput = document.getElementById('password'); // 입력창 가져오기
+        const userInput = passwordInput.value.trim(); // 🔥 공백 제거
+
+        if (userInput === '') {
+          alert('비밀번호를 입력하십시오.'); // 공백일 때 메시지
+          passwordInput.focus(); // 입력창에 포커스
+        } else if (userInput === correctPassword) {
+          <!-- alert('로그인 성공!'); -->
+          window.location.href = 'index-1.html'; // ✅ 로그인 성공 시 이동
+        } else {
+          alert('비밀번호가 틀렸습니다. 다시 시도하세요.');
+          passwordInput.value = ''; // 입력 필드 비우기
+          passwordInput.focus(); // 입력창에 포커스 자동 이동
+        }
+      }
+
+      // 페이지 로드 시 자동으로 입력창에 포커스
+      window.onload = () => {
+        document.getElementById('password').focus();
+      };
+
+      // ✅ 마우스 우클릭 방지
+      document.addEventListener('contextmenu', (event) =>
+        event.preventDefault()
+      );
+
+      // ✅ 개발자 도구(F12, Ctrl+Shift+I 등) 방지
+      document.addEventListener('keydown', (event) => {
+        if (
+          event.key === 'F12' ||
+          (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+          (event.ctrlKey && event.key === 'u')
+        ) {
+          event.preventDefault();
+          alert('개발자 도구 접근이 차단되었습니다.');
+        }
+      });
+    </script>
+  </body>
+</html>
